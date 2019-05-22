@@ -21,7 +21,13 @@ class DoctorsController < ApplicationController
   def destroy
     @doctor.destroy
     redirect_to doctors_path
-
+  end
+  def update
+    if @doctor.update(doctor_params)
+      redirect_to doctor_path
+    else
+      render :edit
+    end
   end
   private
   def set_doctor

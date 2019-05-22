@@ -4,8 +4,7 @@
 <ul>
   <% @patients.each do |patient| %>
   <li>
-  <%= link_to patients_path(patient) %>
+  <%= link_to patient.full_name, patient_path(patient) %>
   </li>
-  <%= patient.full_name %> 
   <% end %>
 </ul>
