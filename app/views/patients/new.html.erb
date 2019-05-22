@@ -1,2 +1,14 @@
-<h1>Patients#new</h1>
-<p>Find me in app/views/patients/new.html.erb</p>
+<h1>register as a Patient</h1>
+
+<%= form_with(model: @patient, local: true, class: 'ui botton') do |f| %>
+<div class="field">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, required: true, placeholder: "First Name" %>
+</div>
+
+<div class="field">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true, placeholder: "Last Name" %>
+</div>
+<%= f.submit  %>
+<% end %>

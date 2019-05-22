@@ -13,10 +13,10 @@ class PatientsController < ApplicationController
     @patient = Patient.new
   end
   def create
-    @patient - Patient.new(patient_params)
+    @patient = Patient.new(patient_params)
 
     if @patient.save
-      redirect_to @patient
+      redirect_to patients_path(@patient)
     else
       render :new
     end
@@ -31,6 +31,6 @@ class PatientsController < ApplicationController
     @patient = Patient.find(params[:id])
   end
   def patient_params
-    params.require(:patient).permit(:first_name, :lastname)
+    params.require(:patient).permit(:first_name, :last_name)
   end
 end
