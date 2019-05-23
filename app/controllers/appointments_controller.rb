@@ -2,7 +2,7 @@ class AppointmentsController < ApplicationController
   before_action :set_doctor
 
   def index
-    @physician = @doctor.appointments.where(appoint: 'physician')
+    @walkin = @doctor.appointments.where(appoint: 'walkin')
     @urgent = @doctor.appointments.where(appoint: 'urgent')
   end
 
@@ -17,8 +17,11 @@ class AppointmentsController < ApplicationController
       redirect_to doctor_appointments_path(@doctor)
     else
       render :new
-
     end
+  end
+  def destroy
+    @apointment.destroy
+    render :new
 
   end
 

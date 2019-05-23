@@ -7,7 +7,7 @@
 <%= f.select :patient_id, @patients.collect { |u| [u.full_name, u.id] } %>
 <br>
 <%= f.label :appoint %>
-<%= f.select :appoint, ['physician', 'urgent'] %>
+<%= f.select :appoint, ['walkin', 'urgent'] %>
 <br>
 <%= f.submit nil, class: "ui green button inverted" %>
 <% end %>

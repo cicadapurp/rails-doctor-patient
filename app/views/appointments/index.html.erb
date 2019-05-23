@@ -2,13 +2,13 @@
 <%= link_to 'Add Appointment', new_doctor_appointment_path(@doctor) %>
 <br>
 
-<h2>Physician</h2>
+<h2>walkin</h2>
 <ul>
-  <% @physician.each do |physician| %>
+  <% @walkin.each do |walkin| %>
   <li>
-    <%= physician.patient.full_name %>
+    <%= walkin.patient.full_name %>
     <br>
-    <%= link_to 'Remove', doctor_appointment_path(@doctor, physician), method: :delete %>
+    <%= link_to 'Remove', doctor_appointment_path(@doctor, walkin), method: :delete %>
   </li>
   <% end %>
 </ul>
