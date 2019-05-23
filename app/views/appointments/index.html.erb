@@ -12,3 +12,14 @@
   </li>
   <% end %>
 </ul>
+
+<h2>urgent</h2>
+<ul>
+  <% @urgent.each do |urgent| %>
+  <li>
+    <%= urgent.patient.full_name %>
+    <br>
+    <%= link_to 'Remove', doctor_appointment_path(@doctor, urgent), method: :delete %>
+  </li>
+  <% end %>
+</ul>
