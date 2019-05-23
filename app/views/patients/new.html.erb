@@ -1,6 +1,6 @@
 <h1>register as a Patient</h1>
 
-<%= form_with(model: @patient, local: true, class: 'ui botton') do |f| %>
+<%= form_with(model: @patient, local: true, class: 'ui form') do |f| %>
 <div class="field">
   <%= f.label :first_name %>
   <%= f.text_field :first_name, required: true, placeholder: "First Name" %>
@@ -10,5 +10,5 @@
   <%= f.label :last_name %>
   <%= f.text_field :last_name, required: true, placeholder: "Last Name" %>
 </div>
-<%= f.submit  %>
+<%= f.submit %>
 <% end %>

@@ -2,3 +2,7 @@
 <br>
 <%= link_to 'Delete Doctor', doctor_path, method: :delete, class: "ui red button inverted" %>
 <%= link_to 'Edit Doctor', edit_doctor_path(@doctor), class: "ui green button" %>
+<br>
+<br>
+<br>
+<%= link_to 'appointments', doctor_appointments_path(@doctor), class: "ui primary button inverted" %>
